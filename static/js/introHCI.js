@@ -8,6 +8,13 @@ $(document).ready(function() {
 /*
  * Function that is called when the document is ready.
  */
+
+function projectClick(e) {
+	e.preventDefault();
+
+	$(this).css("background", "red");
+}
+
 function initializePage() {
 	$("#testjs").click(function(e) {
 		$('.jumbotron h1').text("Javascript is connected");
@@ -15,4 +22,6 @@ function initializePage() {
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
+
+	$("a.thumbnail").click(projectClick);
 }
