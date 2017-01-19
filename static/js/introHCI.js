@@ -10,12 +10,17 @@ $(document).ready(function() {
  */
 
 function projectClick(e) {
+	console.log("Project clicked!");
+
 	e.preventDefault();
 
 	$(this).css("background", "red");
+	$(this).css("border", "10px solid red");
 }
 
 function initializePage() {
+
+	console.log("begin!");
 	$("#testjs").click(function(e) {
 		$('.jumbotron h1').text("Javascript is connected");
 	});
