@@ -9,15 +9,6 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 
-function projectClick(e) {
-	console.log("Project clicked!");
-
-	e.preventDefault();
-
-	$(this).css("background", "red");
-	$(this).css("border", "10px solid red");
-}
-
 function initializePage() {
 
 	console.log("begin!");
@@ -29,4 +20,15 @@ function initializePage() {
 	// example: $("#div-id").click(functionToCall);
 
 	$("a.thumbnail").click(projectClick);
+}
+
+function projectClick(e) {
+	e.preventDefault();
+
+	// $(this).css("background", "red");
+	// $(this).css("border", "10px solid red");
+
+	var projectTitle = $(this).find("p").text();
+	var jumbotronHeader = $(".jumbotron h1");
+	jumbotronHeader.text(projectTitle);
 }
